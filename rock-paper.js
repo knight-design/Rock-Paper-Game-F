@@ -57,10 +57,12 @@ let scores = JSON.parse(localStorage.getItem('scores'));
 
       updateScoreElement();
     document.querySelector('.js-result').innerHTML = Result;
-     document.querySelector('.js-moves').innerHTML = `you 
-  <img src="./images/${playerMove}-emoji.png" class="move-icon">
-  <img src="./images/${computerMove}-emoji.png"class="move-icon">
-computer`;
+    document.querySelector('.js-moves').innerHTML = `
+  You 
+  <img src="./images/${playerMove.toLowerCase()}-emoji.png" class="move-icon">
+  <img src="./images/${computerMove.toLowerCase()}-emoji.png" class="move-icon">
+  Computer
+`;
       
     }
 
@@ -76,3 +78,4 @@ computer`;
       }
       return computerMove;
     }
+
